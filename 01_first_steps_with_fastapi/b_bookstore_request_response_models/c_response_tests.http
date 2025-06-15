@@ -1,0 +1,8 @@
+# Checking the Response Validations 
+### Test GET /all_books
+GET http://localhost:8000/all_books
+# This will remove the isbn field from the response
+
+# Checking the other endpoint v2
+### Test GET /all_books_v2
+GET http://localhost:8000/all_books_v2

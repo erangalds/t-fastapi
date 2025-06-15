@@ -1,0 +1,32 @@
+# Request and Response Models for Bookstore API Tests
+### Test GET /books
+GET http://localhost:8000/books
+# GET request should fail as we have not defined a GET endpoint in the FastAPI app.
+
+# Now Checking the POST request to add a new book
+### Test POST /books
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": 1925,
+  "isbn": "9780743273565"
+}
+
+# The POST request should succeed and return the created book object.
+
+# Now checking the POST request with a different field name for ISBN
+### Test POST /books
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": 1925,
+  "book_id": "9780743273565"
+}
+
+# The POST request should fail as the field name does not match the expected model.

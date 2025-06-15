@@ -1,0 +1,13 @@
+### Base Books endpoint
+GET http://localhost:8000/books
+### Get Book by ID
+GET http://localhost:8000/books/1
+### Base Authors endpoint
+GET http://localhost:8000/authors
+### Get Author by ID
+GET http://localhost:8000/authors/1
+# Checking query parameters
+### Get books base endpoint 
+GET http://localhost:8000/books 
+### Get books filtered by year with query parameters
+GET http://localhost:8000/books?year=2023

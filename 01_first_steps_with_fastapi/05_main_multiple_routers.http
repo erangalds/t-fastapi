@@ -1,0 +1,12 @@
+### Get Root Message
+GET http://localhost:8000/
+### Get Items List
+# - http://localhost:8000/items/
+### Get Item by ID
+GET http://localhost:8000/items/0
+### Get Users Listst:
+GET http://localhost:000/users/
+### Get User by ID
+GET http://localhost:8000/users/1
+### Get the Docs
+GET http://localhost:8000/docs

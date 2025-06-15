@@ -1,0 +1,2 @@
+### Checking Error Handling
+GET http://localhost:8000/error

@@ -1,0 +1,28 @@
+### Data Validation Custom Error Handling
+POST http://localhost:8000/books  
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": 2025
+}
+### Data Validation Custom Error Handling
+POST http://localhost:8000/books  
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": -10.99
+}
+
+### Data Validation Custom Error Handling
+POST http://localhost:8000/books  
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": 2300
+}
