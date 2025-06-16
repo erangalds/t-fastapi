@@ -41,3 +41,10 @@ print(fastapi.__version__)
 print(uvicorn.__version__)
 ```
 
+## Setting up the SQLAlchemy
+
+Instaling SQLAlchemy
+
+```bash
+pip install sqlalchemy
+```

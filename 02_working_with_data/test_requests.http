@@ -1,0 +1,50 @@
+# Testing the /users
+### Testing the Users
+GET http://localhost:8000/users
+
+# Testing create a new user
+### Create a new user
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Eranga",
+  "email": "eranga@example.com"
+}
+
+# Testing the /user/{id}
+### Get user by ID
+GET http://localhost:8000/user/?user_id=1
+Content-Type: application/json
+
+### Get user by ID
+GET http://localhost:8000/user/?user_id=2
+Content-Type: application/json
+### Create a new user
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Yometh",
+  "email": "yometh@example.com"
+}
+
+### Get user by ID
+GET http://localhost:8000/user/?user_id=2
+Content-Type: application/json
+
+# Updating a user
+### Update user by ID
+PUT http://localhost:8000/user/2
+Content-Type: application/json
+
+{
+  "name": "Yometh Updated",
+  "email": "yometh@example.com"
+}
+
+# Checking the updated user
+### Get user by ID
+GET http://localhost:8000/user/?user_id=2
+Content-Type: application/json
+
