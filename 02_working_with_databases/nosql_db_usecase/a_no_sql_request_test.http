@@ -1,0 +1,68 @@
+### Checking the get request for all users
+GET http://localhost:8000/user
+
+### Checking the user creation
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Eranga De Silva",
+  "email": "eranga.desilva@example.com"
+}
+
+### Checking the get request for all users
+GET http://localhost:8000/user
+
+### Checking Another user creation
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Yometh De Silva",
+  "email": "yometh.desilva@example.com"
+}
+
+### Checking the get request for all users
+GET http://localhost:8000/user
+
+### Checking third user creation
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Anjelo Fernando",
+  "email": "anjelo.fernando@example.com"
+}
+
+### Checking the get request for all users
+GET http://localhost:8000/user
+
+# Checking for a Specific User
+### Adding another user
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Priyashan Jayasinghe",
+  "email": "priyashan.jayasinghe@example.com"
+}
+# "id": "685127c51ee2d029a2d2c5c4"
+
+### Checking the get request for a specific user
+GET http://localhost:8000/user/685127c51ee2d029a2d2c5c4
+
+### Checking a non-existing user
+GET http://localhost:8000/user/123456789012345678901234
+
+# Checking for email validation
+### Checking user creation with an invalid email
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "name": "Invalid Email User",
+  "email": "invalid-email"
+}
+
+# It throws the 422 Unprocessable Entity error
+# Details says "An email address must have an @-sign" 
