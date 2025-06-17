@@ -20,5 +20,9 @@ Content-Type: application/json
   "email": "rajike.ekanayake@example.com",
   "age": 25
 }
+
+
+#  "id": "68515e557f5814161bcffbac"
+
 ### Checking user creation with an invalid email
 GET http://localhost:8000/users   

@@ -1,0 +1,38 @@
+### Upload a file
+# @name uploadFile
+POST http://127.0.0.1:8000/uploadfile/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="sample_upload.txt"
+Content-Type: text/plain
+
+< ./sample_upload.txt
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+# Boundry String : ----WebKitFormBoundary7MA4YWxkTrZu0gW
+# Boundry String is used to separate different parts of the form data in a multipart request.
+# The boundary string is defined in the Content-Type header and is used to separate the different parts of the form data.
+# The boundary string must be unique and should not appear in the content of the file being uploaded. 
+# The boundry string at the request body is used to indicate the start and end of the file content.
+# The Content-Disposition header specifies that the content is form data and includes the name of the form field and the filename.
+# The Content-Type header specifies the type of the file being uploaded.
+# The file content is included after the headers, and the request ends with the boundary string followed by two hyphens.
+# The file sample_upload.txt should be present in the same directory as this test.http file.
+# The boundry string in the request body should start with -- 
+# The pattern is
+# ------WebKitFormBoundary<unique_string>
+# The unique string can be any alphanumeric string, but it should not contain any special characters or spaces.
+# --WebKitFormBoundary<unique_string> is a common pattern used in web applications to separate different parts of the form data in a multipart request.
+# --WebKitFormBoundary<unique_string>-- is used to indicate the end of the form data.
+
+# JPEG files: Content-Type: image/jpeg
+# PNG files: Content-Type: image/png
+# PDF files: Content-Type: application/pdf
+# Microsoft Word files: Content-Type: application/msword
+# Microsoft Excel files: Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+# Microsoft PowerPoint files: Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+
+### Download the uploaded file
+# @name downloadFile
+GET http://127.0.0.1:8000/downloadfile/sample_upload.txt

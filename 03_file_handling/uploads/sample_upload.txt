@@ -1,0 +1,3 @@
+Hello, this is a sample text file.
+It will be used to test the FastAPI file upload endpoint.
+Have a great day!
