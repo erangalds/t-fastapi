@@ -14,11 +14,11 @@ Content-Type: application/json
 
 # Testing the /user/{id}
 ### Get user by ID
-GET http://localhost:8000/user/?user_id=1
+GET http://localhost:8000/user/1
 Content-Type: application/json
 
 ### Get user by ID
-GET http://localhost:8000/user/?user_id=2
+GET http://localhost:8000/user/2
 Content-Type: application/json
 ### Create a new user
 POST http://localhost:8000/user
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### Get user by ID
-GET http://localhost:8000/user/?user_id=2
+GET http://localhost:8000/user/2
 Content-Type: application/json
 
 # Updating a user
@@ -45,6 +45,14 @@ Content-Type: application/json
 
 # Checking the updated user
 ### Get user by ID
-GET http://localhost:8000/user/?user_id=2
+GET http://localhost:8000/user/2
 Content-Type: application/json
 
+# Deleting a user
+### Delete user by ID
+DELETE http://localhost:8000/user/2
+
+# Checking the updated user
+### Get user by ID
+GET http://localhost:8000/user/2
+Content-Type: application/json
