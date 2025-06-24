@@ -17,16 +17,16 @@ async def read_users():
     """
     return fake_users_db
 
-@router.get("/{user_id}")
+@router.get("/{user_id}") # /users/0
 async def read_user(user_id: int):
     """
     Retrieve a specific user by their ID.
     """
     if user_id < 0 or user_id >= len(fake_users_db):
         raise HTTPException(status_code=404, detail="User not found")
-        return fake_users_db[user_id]
+    return fake_users_db[user_id]
 
-@router.post("/")
+@router.post("/") # /users/
 async def create_user(user: Dict[str, str]):
     """
     Create a new user.

@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/")  # This decorator defines the path for the route
 def read_root():
     # This function will be called when the root URL is accessed
-    return {"Hello": "World"}
+    return {"Hello": "BSL Labs Team"}
 # The function returns a JSON response with a greeting message
 # The application will run on the default port 8000
 # To run the application, use the command: uvicorn 01-main:app --reload

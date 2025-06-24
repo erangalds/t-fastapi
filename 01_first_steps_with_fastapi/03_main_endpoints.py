@@ -11,3 +11,10 @@ async def read_root():
 # The endpoint responds to GET requests at the root URL ("/") and read_root() function is called.
 # That returns a JSON response with a greeting message.
 # The use of 'async def' allows the endpoint to handle requests asynchronously, which can improve performance.
+@app.get("/users/me")
+async def read_user_me():
+    return {"user_id": "the current user"}
+
+@app.get("/users/{user_id}")
+async def read_user(user_id: str):
+    return {"user_id": user_id}

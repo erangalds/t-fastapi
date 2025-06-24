@@ -5,8 +5,18 @@ GET http://localhost:8000/
 ### Get Item by ID
 GET http://localhost:8000/items/0
 ### Get Users Listst:
-GET http://localhost:000/users/
+GET http://localhost:8000/users/
 ### Get User by ID
 GET http://localhost:8000/users/1
 ### Get the Docs
 GET http://localhost:8000/docs
+### Create New user
+POST http://localhost:8000/users/
+Content-Type: application/json
+
+{
+    "user_name": "dewni"
+}
+
+### Create New Item
+POST http://localhost:8000/items/
