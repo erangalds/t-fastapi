@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Apache Web Server Service
+  apache_server:
+    # We use the official httpd (Apache) image from Docker Hub.
+    image: httpd:2.4
+    container_name: lawrance_labs_apache
+    ports:
+      # Maps port 8080 on your machine to port 80 in the container.
+      - "8080:80"
+    volumes:
+      # Mounts our local 'www' directory to Apache's default web root.
+      - ./www:/usr/local/apache2/htdocs/
+    restart: unless-stopped
+
+  # Nginx Web Server Service
+  nginx_server:
+    image: nginx:latest
+    container_name: lawrance_labs_nginx
+    ports:
+      # Maps port 8081 on your machine to port 80 in the container.
+      - "8090:80"
+    volumes:
+      # Mounts our local 'www' directory to Nginx's default web root.
+      - ./www:/usr/share/nginx/html
+    restart: unless-stopped

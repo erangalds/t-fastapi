@@ -1,3 +1,4 @@
 .env
 **/__pycache__/
+02_working_with_data/mongo-data/
 02_working_with_databases/nosql_db_usecase/mongo-data/
